@@ -1,0 +1,488 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Icons link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        .sticky {
+            background-color: rgb(60, 175, 241);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 12vh;
+            padding: 10px 10% 0px; 
+            position: fixed;
+            width: 100%;
+            top: 0px;
+            z-index: 100;
+            animation: slide 0.5s linear;
+        }
+
+
+        .sticky img {
+            margin-top: -20px;
+            width: 80px;
+        }
+
+        .sticky ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        .sticky .links li {
+            height: 100%;
+            margin: 20px;
+        }
+
+        .sticky .links li a {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: medium;
+            font-size: 14px;
+            color: white;
+        }
+
+        .mobile-sticky {
+            background-color: black;
+            color: white;
+            position: absolute;
+            width: 100%;
+            display: none;
+        }
+
+        /* .mobile-sticky ul {
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        } */
+
+        .mobile-sticky .links {
+            display: block;
+            text-align: left;
+            list-style-type: none;
+            padding-left: 0px;
+        }
+
+        .mobile-sticky .links li {
+            border-top: 1px solid rgba(256, 256, 256, 0.3);
+            padding-left: 0px;
+        }
+
+        .mobile-sticky .links li a {
+            font-size: 14px;
+            margin: 10px;
+        }
+
+        .mobile-sticky .icons li a {
+            background-color: white;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            margin: 5px;
+            color: black;
+            font-size: 30px;
+        }
+
+
+        @media screen and (max-width: 980px) {
+            .sticky {
+                background-color: black;
+            }
+
+        .hamburger-menu {
+            display: block;
+            font-size: 25px;
+            color: white
+        }
+
+        .hamburger-menu:hover {
+            color: white;
+        }
+
+        .sticky .links li a {
+            display: none;
+        }
+        
+        .sticky .icons li a {
+            display: none;
+        }
+
+        .showing {
+            display: block;
+            }
+        }
+
+        .y:hover {
+            color: white;
+        }
+
+    </style>
+
+    <title>NEXUS</title>
+</head>
+<body>
+    <div class="header">
+    <nav class="nav ">
+
+        <a class="logo" href="#"> <img src="download.webp" alt=""></a>
+
+        <ul class="links">
+            <li>
+            <a class="nav-link x" href="#">HOME</a>
+            </li>
+            <li>
+            <a class="nav-link x" href="#">ABOUT</a>
+            </li>
+            <li>
+            <a class="nav-link x" href="#">SERVICES</a>
+            </li>
+            <li>
+                <a class="nav-link x" href="#">PAGES</a>
+            </li>
+            <li>
+                <a class="nav-link x" href="#">BLOG</a>
+            </li>
+            <li>
+            <a class="nav-link x" href="#">CONTACT</a>
+            </li>
+        </ul>
+
+        <ul class="icons">
+            <a class="start start-desktop"  href="#">Free Trial</a>
+        </ul>
+        <a href="#" class="hamburger-menu"><i class="fas fa-bars"></i></a>
+    </nav>
+    <nav class="mobile-nav">
+        <ul class="links">
+            <li>
+                <a class="nav-link x" href="#">HOME</a>
+                </li>
+                <li>
+                <a class="nav-link x" href="#">ABOUT</a>
+                </li>
+                <li>
+                <a class="nav-link x" href="#">SERVICES</a>
+                </li>
+                <li>
+                    <a class="nav-link x" href="#">PAGES</a>
+                </li>
+                <li>
+                    <a class="nav-link x" href="#">BLOG</a>
+                </li>
+                <li>
+                <a class="nav-link x" href="#">CONTACT</a>
+                </li>
+        </ul>
+    </nav>
+    <div class="text ">
+        <div class="row">
+            <div class="col-lg-6 col-sm-12">
+            <h1>Mass People <br>
+                Oriented Software</h1>
+            <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Accumsan porttitor egestas fermentum nulla.</p>
+            <a class="start me-3"  href="#">Get Started</a>
+            <a class="start last"  href="#">Download</a>
+            </div>
+            <div class="col-lg-6 col-sm-12">
+                <img src="head-img.webp" alt="" width="100%;">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="how-container">
+    <h1 class="text-center mt-5" style="font-weight: bold;">HOW IT WORK FOR YOU</h1>
+    <p class="text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt <br> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+  <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <img src="icon1.png" alt="" style="width: 80px; margin-left: -15px">
+      <h2>First click tests</h2>
+      <p>While most people enjoy casino gambling,</p>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <img src="icon2.png" alt="" style="width: 80px; margin-left: -15px">
+      <h2>Design surveys</h2>
+      <p>Sports betting,lottery and bingo playing for the fun</p>
+    </div>
+    <div class="col-lg-4 col-md-6 col-sm-12">
+      <img src="icon3.png" alt="" style="width: 80px; margin-left: -15px">
+      <h2>Preference tests</h2>
+      <p>The Myspace page defines the individual.</p>
+    </div>
+  </div>
+
+   
+  <div class="pac-section mt-5">
+    <div class="row gx-4">
+      <div class="col-lg-3 col-sm-12">
+       <div class="p-3 border colm" style="background-color: white; display: flex; align-items: center; justify-content: center; font-size: 14px;">
+        EASY TO USE
+       </div>
+      </div>
+      <div class="col-lg-3 col-sm-12">
+        <div class="p-3 border colm" style="background-color: white; display: flex; align-items: center; justify-content: center; font-size: 14px;">
+            UNLIMITED COLORS
+        </div>
+       </div>
+       <div class="col-lg-3 col-sm-12">
+        <div class="p-3 border colm" style="background: linear-gradient(to right, rgb(60, 175, 241), rgb(158, 223, 235)); display: flex; align-items: center; justify-content: center; font-size: 14px;">
+            UNIQUE FEATURES
+        </div>
+       </div>
+       <div class="col-lg-3 col-sm-12">
+        <div class="p-3 border colm" style="background-color: white; display: flex; align-items: center; justify-content: center; font-size: 14px;">
+            UNIQUE FEATURES
+        </div>
+       </div>
+    </div>
+  </div>
+</div>
+
+<div class="text ">
+    <div class="row">
+        <div class="col-lg-6 col-sm-12">
+        <h1>Mass People <br>
+            Oriented Software</h1>
+        <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Accumsan porttitor egestas fermentum nulla.</p>
+        <a class="start me-3 y"  href="#" style="background: linear-gradient(to right, rgb(60, 175, 241), rgb(158, 223, 235)); display: flex; align-items: center; justify-content: center; font-size: 14px; width: 200px; border: none;">Get Started Now</a>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            <img src="sec-img.webp" alt="" width="100%;">
+        </div>
+    </div>
+</div>
+
+
+<div class="how-container">
+    <h1 class="text-center mt-5" style="font-weight: bold;">UNIQUE SCREENS THAT WORK PERFECTLY</h1>
+    <p class="text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt <br> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+    <div class="text-center">
+        <img src="head-img.webp" alt="" width="500px" >
+    </div>
+  </div>
+</div>
+
+
+
+<div class="text ">
+    <div class="row">
+        <div class="col-lg-6 col-sm-12">
+        <h1>Mass People <br>
+            Oriented Software</h1>
+        <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Accumsan porttitor egestas fermentum nulla.</p>
+        <a class="start me-3 y"  href="#" style="background: linear-gradient(to right, rgb(60, 175, 241), rgb(158, 223, 235)); display: flex; align-items: center; justify-content: center; font-size: 14px; width: 200px; border: none;">Get Started Now</a>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+            <img src="sec-again.webp" alt="" width="100%;">
+        </div>
+    </div>
+</div>
+
+<div class="how-container">
+    <h1 class="text-center mt-5" style="font-weight: bold;">CHOOSE YOUR PRICE PLAN</h1>
+    <p class="text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt <br> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+    <div class="pac-section">
+        <div class="row gx-4">
+          <div class="col-lg-4 col-sm-12">
+           <div class="p-3 border colm">
+                <p>Basic</p>
+                <ul>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Lorem ipsum dolor</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Curabitur id libero </li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Etiam cursus ex </li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Etiam auctor, erat</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Eleifend arcu nulla </li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Quisque ornare </li>
+                </ul>
+                <a href="#">Free Consultation</a>
+           </div>
+          </div>
+          <div class="col-lg-4 col-sm-12">
+            <div class="p-3 border colm">
+                 <p>Basic</p>
+                 <ul>
+                     <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Lorem ipsum dolor</li>
+                     <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Curabitur id libero </li>
+                     <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Etiam cursus ex </li>
+                     <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Etiam auctor, erat</li>
+                     <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Eleifend arcu nulla </li>
+                     <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Quisque ornare </li>
+                 </ul>
+                 <a href="#">Free Consultation</a>
+            </div>
+           </div>
+           <div class="col-lg-4 col-sm-12">
+            <div class="p-3 border colm">
+                 <p>Basic</p>
+                 <ul>
+                     <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Lorem ipsum dolor</li>
+                     <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Curabitur id libero </li>
+                     <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Etiam cursus ex </li>
+                     <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Etiam auctor, erat</li>
+                     <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Eleifend arcu nulla </li>
+                     <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Quisque ornare </li>
+                 </ul>
+                 <a href="#">Free Consultation</a>
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+
+<div class="how-container">
+    <h1 class="text-center mt-5" style="font-weight: bold;">CHOOSE YOUR PRICE PLAN</h1>
+    <p class="text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt <br> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+    <div class="pac-section">
+        <div class="row gx-4">
+          <div class="col-lg-6 col-sm-12">
+           <div class="p-3 border colm">
+                <p>Basic</p>
+                <ul>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Lorem ipsum dolor</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Curabitur id libero </li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Etiam cursus ex </li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Etiam auctor, erat</li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Eleifend arcu nulla </li>
+                    <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Quisque ornare </li>
+                </ul>
+                <a href="#">Free Consultation</a>
+           </div>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <div class="p-3 border colm">
+                 <p>Basic</p>
+                 <ul>
+                     <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Lorem ipsum dolor</li>
+                     <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Curabitur id libero </li>
+                     <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Etiam cursus ex </li>
+                     <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Etiam auctor, erat</li>
+                     <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Eleifend arcu nulla </li>
+                     <li><i class="fa fa-check" aria-hidden="true"></i> &NonBreakingSpace; Quisque ornare </li>
+                 </ul>
+                 <a href="#">Free Consultation</a>
+            </div>
+           </div>
+        </div>
+      </div>
+    </div>
+    </div>
+</div>
+
+
+<div class="text ">
+    <div class="row">
+        <div class="col-lg-6 col-sm-12">
+            <img src="head-img.webp" alt="" width="100%;">
+        </div>
+        <div class="col-lg-6 col-sm-12">
+        <h1>Mass People <br>
+            Oriented Software</h1>
+        <p class="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br> Accumsan porttitor egestas fermentum nulla.</p>
+        <a class="start me-3 y start-desktop"  href="#" style="background: linear-gradient(to right, rgb(60, 175, 241), rgb(158, 223, 235)); display: flex; align-items: center; justify-content: center; font-size: 14px; width: 200px; border: none;">Get Started Now</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="how-container">
+    <h1 class="text-center mt-5" style="font-weight: bold;">Got Impressed to our features?</h1>
+    <p class="text-center mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt <br> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+    <div class="text-center">
+        <a class="start me-3 y start last" href="#"> Request Free Demo </a>
+    </div>
+  </div>
+</div>
+
+
+<div class="container my-5 footer">
+    <div class="row mt-5">
+      <div class="col-lg-4 col-sm-12">
+        <h5>About Me</h5>
+        <p>Do you want to be even more successful? Learn to love learning and growth. The more effort you put into improving your skills,</p>
+        <p>Copyright ©2022 All rights reserved | This template is made with <i class="fas fa-heart"></i> by Colorlib
+        </p>
+    </div>
+    <div class="col-lg-4 col-sm-12">
+    <form action="">
+        <h5>Newsletter</h5>
+        <p>Stay updated with our latest trends</p>  
+        <input type="text" class="p-2" placeholder="Enter your phone Number" style="width: 100%;"> <br> <br>
+    </form>
+    </div>
+    <div class="col-lg-4 col-sm-12">
+        <h5>Follow Me</h5>
+    </div>
+</div>
+
+
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+<script>
+    let btn = document.querySelector(".hamburger-menu");
+    let icon = btn.querySelector(".fa-bars");
+    let menu = document.querySelector(".mobile-nav")
+
+    btn.onclick = function (){
+        if(icon.classList.contains("fa-bars")){
+            icon.classList.replace("fa-bars", "bi-x-lg");
+            menu.classList.add('showing')
+        }
+        else {
+            icon.classList.replace("bi-x-lg", "fa-bars");
+            menu.classList.remove('showing')
+        }
+    }
+</script>
+
+<script>
+    var nav = document.querySelector('.nav');
+    var mobile = document.querySelector('.mobile-nav')
+    window.addEventListener('scroll', function(){
+
+
+        // console.log(nav)
+        // nav.classList.add("sticky", window.scrollY > 200);
+        if(window.scrollY > 200) {
+            nav.classList.replace('nav', 'sticky')
+            mobile.classList.replace('mobile-nav', 'mobile-sticky')
+        } else {
+            nav.classList.replace('sticky', 'nav')
+            mobile.classList.replace('mobile-sticku', 'mobile-nav')
+        }
+    })
+</script>
+
+
+<script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+</body>
+</html>
+
